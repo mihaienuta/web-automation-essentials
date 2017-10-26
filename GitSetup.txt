@@ -1,0 +1,30 @@
+#############
+# Identity: #
+#############
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+$ git config --list  => Check Git global settings
+
+Editor:
+$ git config --global core.editor emacs
+
+############################################
+# Creating SSH Key for Git authentication: #
+############################################
+$ ssh-keygen -t rsa -b 4096 -C "daniel.chivescu@avira.com"
+$ cat id_rsa.pub | pbcopy => paste in Git>Personal Settings>SSH Keys
+$ eval $('ssh-agent -s')
+$ ssh-agent <= starts the SSH Agent on the local machine
+$ ssh-add <keyName> (Example: id_rsa)  <= Adds the previously created RSA key to your local SSH Store
+
+$ git clone <Repository SSH URL>
+
+Sublime Text2/3
+
+* Install Package Control (https://packagecontrol.io/installation#st2) ( CTRL+` & Paste the Python code)
+* Install Cucumber, Cucumber(Gherkin) Formatter, Sublemacspro(EMACS shortcuts) ( CTRL+Shift+P )
+
+Node_Modules
+> npm install cucumber
+> npm install selenium-webdriver@2.41.0
+> npm install browserify bluebird coffee-script hide-stack-frames-from nopt pogo stack-chain underscore underscore.string walkdir
